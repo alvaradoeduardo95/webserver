@@ -1,7 +1,8 @@
-require('dotenv').config();
 const express = require('express')
 const app = express()
+
 var hbs = require('hbs');
+require('dotenv').config();
 
 const port = process.env.Port;
 
@@ -12,9 +13,11 @@ app.set('view engine', 'hbs');
 app.use( express.static('public') );
 hbs.registerPartials(__dirname + '/views/partials');
 
-app.get('/holaMundo', (req, res) => {
-    res.send('Este es el Hola Mundo')
-}
+
+app.get('/holamundo', function (req, res) {
+    res.send('Este es el Hola Mundo');
+})
+ 
 
 
 app.get('/', (req, res) => {
