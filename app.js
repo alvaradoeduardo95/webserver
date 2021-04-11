@@ -1,10 +1,10 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 var hbs = require('hbs');
 require('dotenv').config();
 
-const port = process.env.Port;
+const port = process.env.PORT;
 
 //TODO: require(hbs)
 app.set('view engine', 'hbs');
